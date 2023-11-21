@@ -16,17 +16,18 @@ class AppRoute{
                 key: state.pageKey,
                 child: const HomeScreen(),
                 transitionsBuilder: (context, animation, secondaryAnimation, child) =>
-               /* // Example of a slide transition in Flutter
-                SlideTransition(
-                  position: Tween<Offset>(
-                    begin: const Offset(1, 0),
-                    end: Offset.zero,
-                  ).animate(animation),
-                  child: child,
-                )*/
 
-                CupertinoPageTransition(primaryRouteAnimation: animation, secondaryRouteAnimation: secondaryAnimation, child: child, linearTransition: true)
+                /* // Example of a slide transition in Flutter
+                      SlideTransition(
+                        position: Tween<Offset>(
+                          begin: const Offset(1, 0),
+                          end: Offset.zero,
+                        ).animate(animation),
+                        child: child,
+                      )
+                     */
 
+                    CupertinoPageTransition(primaryRouteAnimation: animation, secondaryRouteAnimation: secondaryAnimation, linearTransition: true, child: child)
               ),
 
               routes: [
@@ -47,7 +48,7 @@ class AppRoute{
                       )
                      */
 
-                      CupertinoPageTransition(primaryRouteAnimation: animation, secondaryRouteAnimation: secondaryAnimation, child: child, linearTransition: true)
+                      CupertinoPageTransition(primaryRouteAnimation: animation, secondaryRouteAnimation: secondaryAnimation, linearTransition: true, child: child)
 
                   ),
 

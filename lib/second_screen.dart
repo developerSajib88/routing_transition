@@ -11,6 +11,9 @@ class _SecondScreenState extends State<SecondScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      appBar: AppBar(),
+
       body: Container(
         width: double.infinity,
         height: double.infinity,
